@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- 设置开发模式 -->
+    <constant name="struts.devMode" value="false" />
+    <package name="EnglishLearn" namespace="/" extends="struts-default">
+        <global-results>
+			<result name="msg">/jsps/msg.jsp</result>
+			<result name="msg2">/jsps/msg2.jsp</result>
+		</global-results>
+		<!-- 用户模块 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="loginPage">/jsps/login.jsp</result>
+			<result name="registPage">/jsps/regist.jsp</result>
+			<result name="menu">/jsps/menu.jsp</result>
+		</action>
+		<!-- 单词、例句模块 -->
+		<action name="word_*" class="wordAction" method="{1}">
+			<result name="wordPage">/jsps/word.jsp</result>
+			<result name="phrasePage">/jsps/phrase.jsp</result>
+			<result name="examPage">/jsps/exam.jsp</result>
+			<result name="searchPage">/jsps/search.jsp</result>
+			<result name="updateWord">/jsps/updateWord.jsp</result>
+			<result name="page">/jsps/page.jsp</result>
+			<result name="tranWord">/jsps/tran.jsp</result>
+		</action>
+	</package>
+</struts>
+
+
+

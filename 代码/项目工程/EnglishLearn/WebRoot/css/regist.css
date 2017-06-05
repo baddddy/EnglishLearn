@@ -1,0 +1,28 @@
+  body{
+    color:#404040;
+  }
+  .MainFrame{
+    margin-left:240px;
+    margin-top:80px;
+  }
+  .divTitle{
+    line-height: 30px;
+    font-weight: 900;
+    width: 880px;
+    height: 30px;
+    border: 1px solid #d0d0d0;
+    background: url(../images/bg_btns.png) repeat-x;
+    background-position: 0 -132px;
+  }
+  .spanTitle{margin-left: 18px;}
+  .inter{ margin:0 auto 0 auto;}
+  .inter2{margin-left:320px;}
+  #registFrom{
+    border:1px solid #d0d0d0;
+    width:880px;
+    height:180px;
+  }
+  
+  
+  
+  

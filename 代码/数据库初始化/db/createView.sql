@@ -1,0 +1,5 @@
+--此脚本用于初始化数据库视图
+
+--定义常用单词的视图
+CREATE VIEW COMMON_WORD(单词,意思)
+AS SELECT  FWORD,FMEAN FROM T_CET4 WHERE COMMON=1;

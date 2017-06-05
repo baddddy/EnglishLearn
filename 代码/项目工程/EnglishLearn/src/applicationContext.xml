@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- Action的配置-->
+	<bean id="userAction" class="zhangchao.Action.UserAction" scope="prototype">
+	    <property name="userService" ref="userService" />
+	</bean>
+	<bean id="wordAction" class="zhangchao.Action.WordAction" scope="prototype">
+	    <property name="wordService" ref="wordService" />
+	</bean>
+	<!-- service层注入dao层 -->
+	<bean id="userService" class="zhangchao.Service.UserService">
+		<property name="userDao" ref="userDao" />
+	</bean>
+	<bean id="wordService" class="zhangchao.Service.WordService">
+		<property name="ct4dao" ref="ct4dao" />
+	</bean>
+	<!-- dao层的配置 -->
+	<bean id="userDao" class="zhangchao.Dao.UserDao">
+	</bean>
+	<bean id="ct4dao" class="zhangchao.Dao.Ct4Dao">
+	</bean>
+	
+</beans>
+
+
+
+
+

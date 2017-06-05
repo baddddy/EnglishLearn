@@ -1,0 +1,28 @@
+body {background-color: f5f5f5;}
+.MainFrame{
+    margin:0 auto 0 auto;
+	margin-top: 75px;
+	width:840px;
+	height:400px;
+	border: 1px solid #d1d1cf;
+}
+.LeftFrame{
+    float:left;
+}
+.LoginTop{
+    margin-left: 430px; 
+	margin-top: 30px;
+}
+.TopTitle{
+    color: #696969; 
+	font-size: 20px; 
+	font-weight: 900;
+}
+#LoginForm{
+    padding-left: 480px; 
+	padding-top:60px;
+	width:350px;
+	height:190px;
+}
+
+
